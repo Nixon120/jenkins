@@ -3,8 +3,9 @@ kind: Deployment
 metadata:
   name: hello
 spec:
-  strategy:
-    type: Recreate
+  selector:
+    matchLabels:
+      app: hello
   template:
     metadata:
       labels:

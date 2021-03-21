@@ -17,7 +17,7 @@ spec:
       containers:
       - name: hello
         image: myimage
-      - name: 3
+      - name: nginx
         image: nginx:1.7.9
         ports:
         - containerPort: 80

@@ -15,11 +15,11 @@ spec:
     spec:
      containers:
      - name: hello
-      image: nixonlauture/hello:latest
-      imagePullPolicy: Always
-      ports:
-      - containerPort: 5000
-        name: hello
+       image: nixonlauture/hello:latest
+       imagePullPolicy: Always
+       ports:
+       - containerPort: 5000
+         name: hello
 
 ---
 apiVersion: v1

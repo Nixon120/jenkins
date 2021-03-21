@@ -1,38 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello
+  name: nginx-deployment
+  labels:
+    app: nginx
 spec:
+  replicas: 3
   selector:
     matchLabels:
-      app: hello
-  replicas: 3
+      app: nginx
   template:
     metadata:
       labels:
-        app: hello
-        tier: hello
+        app: nginx
     spec:
-     containers:
-     - name: hello
-      image: nixonlauture/hello:latest
-      imagePullPolicy: Always
-      ports:
-      - containerPort: 5000
-        name: hello
-
----
-apiVersion: v1
-kind: Service
-metadata:
-name: hello
-labels:
-  app: hello
-spec:
-ports:
-  - port: 5000
-    targetPort: 5000
-selector:
-  app: hello
-  tier: hello
-type: LoadBalancer
+      containers:
+      - name: hello
+        image: myimage
+      - name: 3
+        image: nginx:1.7.9
+        ports:
+        - containerPort: 80

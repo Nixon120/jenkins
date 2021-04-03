@@ -7,7 +7,7 @@ COPY . /app
 # The application's directory will be the working directory
 WORKDIR /app
 
-# Installl Node.js dependencies defined in '/app/packages.json'
+# Install Node.js dependencies defined in '/app/packages.json'
 RUN npm install
 
 FROM bitnami/node:9-prod

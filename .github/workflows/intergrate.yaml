@@ -38,4 +38,4 @@ jobs:
       # Push image to Google Container Registry
       - name: Build
         run: |-
-          docker push eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA
+          docker push hello-world/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA

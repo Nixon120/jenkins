@@ -32,8 +32,8 @@ jobs:
           docker build  -t hello-world/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA .
 
       # Configure docker to use the gcloud command-line tool as a credential helper
-     # - run: |
-          #gcloud auth configure-docker -q
+      - run: |
+          gcloud auth configure-docker -q
 
       # Push image to Google Container Registry
       - name: Build

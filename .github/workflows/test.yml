@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      # Setup gcloud CLI
+      # Setup gcloud CLII
       - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
           service_account_key: ${{ secrets.GCP_CREDENTIALS }}
